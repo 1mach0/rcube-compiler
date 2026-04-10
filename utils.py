@@ -28,5 +28,16 @@ for z in [-1, 0, 1]:
             )
             EDGES.append(cubie)
 
+CENTRES = []
+
+
 def neg_vec(v):
    return (-v[0], -v[1], -v[2])
+
+def orient_to_matrix(orient):
+    ax_x, ax_y, ax_z = orient
+    return [
+        [ax_x[0], ax_y[0], ax_z[0]],
+        [ax_x[1], ax_y[1], ax_z[1]],
+        [ax_x[2], ax_y[2], ax_z[2]],
+    ]

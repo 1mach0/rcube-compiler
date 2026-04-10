@@ -1,10 +1,11 @@
 from transforms import transform_x, transform_y, transform_z
-from utils import CORNERS, EDGES
+from utils import CORNERS, EDGES, CENTRES
 
 class Cube:
     def __init__(self):
-        self.CORNERS_PERM = CORNERS.copy()
-        self.EDGES_PERM = EDGES.copy()
+        self.CORNERS_PERM = CORNERS
+        self.EDGES_PERM = EDGES
+        self.CENTRES = CENTRES
 
     def move(self, move_name):
         "redirect to proper channel"
