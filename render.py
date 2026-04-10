@@ -1,6 +1,10 @@
-from models import Cubie, Cube
+from models import Cube
 
 rub = Cube()
-print(rub.CORNERS_PERM)
-rub.U(False)
-print(rub.CORNERS_PERM)
+for cubelet in rub.CORNERS_PERM:
+    print(cubelet.coords)
+
+rub.U(inv=False)
+
+for cubelet in rub.CORNERS_PERM:
+    print(cubelet.coords)

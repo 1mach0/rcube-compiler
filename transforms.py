@@ -1,5 +1,4 @@
-from models import Cubie
-from utils import neg_vec
+from utils import neg_vec, Cubie
 
 def transform_x(pos: Cubie, sign=True):
     x, y, z = pos.coords
