@@ -2,10 +2,9 @@ from transforms import transform_x, transform_y, transform_z
 from utils import CORNERS, EDGES
 
 class Cubie:
-    def __init__(self, pos_x: int, pos_y: int, pos_z: int, or_x: bool, or_y: bool, or_z: bool):
+    def __init__(self, pos_x: int, pos_y: int, pos_z: int, or_x: tuple, or_y: tuple, or_z: tuple):
         self.coords = (pos_x, pos_y, pos_z)
         self.orient = (or_x, or_y, or_z)
-
 
 class Cube:
     def __init__(self):
