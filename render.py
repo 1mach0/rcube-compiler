@@ -5,7 +5,7 @@ import mujoco.viewer
 from models import Cube
 from utils import orient_to_matrix
 
-SCALE = 0.04
+SCALE = 0.06
 
 def to_pos(coords):
     return np.array([SCALE * c for c in coords])
@@ -21,7 +21,7 @@ def apply_cube_to_mujoco(cube,data):
 
     for i, cubie in enumerate(cubies):
         data.mocap_pos[i] = to_pos(cubie.coords)
-        data.mocap_quat[i] = orient_to_quat(cubie.orient)
+        data.mocap_quat[i] = np.array([0, 0, 0, 0]) #orient_to_quat(cubie.orient)
 
 model = mujoco.MjModel.from_xml_path("Cube.xml")
 data = mujoco.MjData(model)
