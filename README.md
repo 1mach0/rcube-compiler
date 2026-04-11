@@ -113,7 +113,7 @@ apply_cube_to_mujoco(rub, data)
 Install required packages:
 
 ```bash
-pip install mujoco numpy
+pip install -r requirements.txt
 ```
 
 ---
