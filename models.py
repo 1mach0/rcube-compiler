@@ -9,7 +9,7 @@ class Cube:
         self.EDGES_PERM = dcpy(EDGES)
         self.CENTRES = dcpy(CENTRES)
 
-    def move(self, move_name):
+    def move(self):
         "redirect to proper channel"
         pass
 
