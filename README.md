@@ -1,5 +1,7 @@
 # rcube-compiler
 
+> Note: This repository is still under-construction, the MuJoCo rendering *might* screw up the quaternion rotations
+
 A lightweight Rubik's Cube state-to-visualization engine that converts abstract cube state representations into fully rendered **MuJoCo** models for simulation, visualization, and future robotic/AI applications.
 
 ---
@@ -152,9 +154,3 @@ starting with Rubik’s Cube representations and extending toward broader roboti
 ## License
 
 MIT License
-
----
-
-## Author
-
-Built by **Shanmukh Machiraju**
