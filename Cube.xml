@@ -62,36 +62,36 @@
   <light pos="0 0 1"/>
 
   <!-- Centers -->
-  <body name="c0" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="yellow"/></body>
-  <body name="c1" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" quat="0.7071 0.7071 0 0" material="white"/></body>
-  <body name="c2" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="blue"/></body>
-  <body name="c3" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="green"/></body>
-  <body name="c4" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="red"/></body>
-  <body name="c5" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="orange"/></body>
+  <body name="c_y" mocap="true" pos="0 0 0" quat="0.7071 -0.7071 0 0"><geom type="box" size="0.018 0.018 0.018" material="yellow"/></body>
+  <body name="c_w" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="white"/></body>
+  <body name="c_b" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="blue"/></body>
+  <body name="c_g" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="green"/></body>
+  <body name="c_r" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="red"/></body>
+  <body name="c_o" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="orange"/></body>
 
   <!-- Edges -->
-  <body name="c6" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="blue_yellow"/></body>
-  <body name="c7" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="blue_orange"/></body>
-  <body name="c8" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="blue_red"/></body>
-  <body name="c9" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="blue_white"/></body>
-  <body name="c10" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="orange_yellow"/></body>
-  <body name="c11" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="red_yellow"/></body>
-  <body name="c12" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="orange_white"/></body>
-  <body name="c13" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="red_white"/></body>
-  <body name="c14" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="green_yellow"/></body>
-  <body name="c15" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="green_orange"/></body>
-  <body name="c16" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="green_red"/></body>
-  <body name="c17" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="green_white"/></body>
+  <body name="e_by" mocap="true" pos="0 0 0" quat="0.7071 -0.7071 0 0"><geom type="box" size="0.018 0.018 0.018" material="blue_yellow"/></body>
+  <body name="e_bo" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="blue_orange"/></body>
+  <body name="e_br" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="blue_red"/></body>
+  <body name="e_bw" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="blue_white"/></body>
+  <body name="e_yo" mocap="true" pos="0 0 0" quat="0.7071 -0.7071 0 0"><geom type="box" size="0.018 0.018 0.018" material="orange_yellow"/></body>
+  <body name="e_yr" mocap="true" pos="0 0 0" quat="0.7071 -0.7071 0 0"><geom type="box" size="0.018 0.018 0.018" material="red_yellow"/></body>
+  <body name="e_wo" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="orange_white"/></body>
+  <body name="e_wr" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="red_white"/></body>
+  <body name="e_gy" mocap="true" pos="0 0 0" quat="0.7071 -0.7071 0 0"><geom type="box" size="0.018 0.018 0.018" material="green_yellow"/></body>
+  <body name="e_go" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="green_orange"/></body>
+  <body name="e_gr" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="green_red"/></body>
+  <body name="e_gw" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="green_white"/></body>
 
   <!-- Corners -->
-  <body name="c18" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="blue_orange_yellow"/></body>
-  <body name="c19" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="blue_red_yellow"/></body>
-  <body name="c20" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="blue_orange_white"/></body>
-  <body name="c21" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="blue_red_white"/></body>
-  <body name="c22" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="green_orange_yellow"/></body>
-  <body name="c23" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="green_red_yellow"/></body>
-  <body name="c24" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="green_orange_white"/></body>
-  <body name="c25" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="green_red_white"/></body>
+  <body name="x_byo" mocap="true" pos="0 0 0" quat="0.7071 -0.7071 0 0"><geom type="box" size="0.018 0.018 0.018" material="blue_orange_yellow"/></body>
+  <body name="x_byr" mocap="true" pos="0 0 0" quat="0.7071 -0.7071 0 0"><geom type="box" size="0.018 0.018 0.018" material="blue_red_yellow"/></body>
+  <body name="x_bwo" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="blue_orange_white"/></body>
+  <body name="x_bwr" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="blue_red_white"/></body>
+  <body name="x_gyo" mocap="true" pos="0 0 0" quat="0.7071 -0.7071 0 0"><geom type="box" size="0.018 0.018 0.018" material="green_orange_yellow"/></body>
+  <body name="x_gyr" mocap="true" pos="0 0 0" quat="0.7071 -0.7071 0 0"><geom type="box" size="0.018 0.018 0.018" material="green_red_yellow"/></body>
+  <body name="x_gwo" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="green_orange_white"/></body>
+  <body name="x_gwr" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="green_red_white"/></body>
 
 </worldbody>
 </mujoco>
