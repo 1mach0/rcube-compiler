@@ -9,10 +9,6 @@ class Cube:
         self.EDGES_PERM = dcpy(EDGES)
         self.CENTRES = dcpy(CENTRES)
 
-    def move(self):
-        "redirect to proper channel"
-        pass
-
     def get_all_cubies(self):
         return self.CENTRES + self.EDGES_PERM + self.CORNERS_PERM
 
