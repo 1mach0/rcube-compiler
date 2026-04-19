@@ -5,7 +5,7 @@ import mujoco.viewer
 from models import Cube
 from utils import orient_to_matrix
 
-SCALE = 0.06
+SCALE = 0.04
 
 def quat_mul(q1, q2):
     # Hamilton product
@@ -31,12 +31,15 @@ def axis_angle_to_quat(axis, angle):
         axis[2]*s
     ])
 
+def to_pos(coords):
+    return np.array([SCALE * c for c in coords])
+
 def get_subset(model, cubies, subset=None, colors=None):
     result = []
 
     for i, cubie in enumerate(cubies):
         mocap_id = model.body_mocapid[body_id]
-        name = mujoco.mj_id2name(model, mujoco.mjtObj.mjOBJ_BODY, body_id)
+        name = mujoco.mj_id2name(model, mujoco.mjtObj.mjOBJ_BODY, mocap_id)
 
         if subset:
             if subset == "centers" and not name.startswith("c_"):
@@ -55,28 +58,11 @@ def get_subset(model, cubies, subset=None, colors=None):
 
     return result
 
-def to_pos(coords):
-    return np.array([SCALE * c for c in coords])
-
-def orient_to_quat(orient):
-    mat = orient_to_matrix(orient)
-    quat = np.zeros(4)
-    mujoco.mju_mat2Quat(quat, mat.flatten())
-    return quat
-
 def apply_cube_to_mujoco(cube, model, data):
     cubies = cube.get_all_cubies()
 
-    blue_face = get_subset(model=model, cubies=cubies, colors="b")
-
-    for i, cubie in enumerate(blue_face):
-        data.mocap_pos[i] = ... #to_pos(cubie.coords)
-        data.mocap_quat[i] = ...
-
     for i, cubie in enumerate(cubies):
         data.mocap_pos[i] = to_pos(cubie.coords)
-
-        # data.mocap_quat[i] = np.array([0, 0, 0, 0]) #orient_to_quat(cubie.orient)
 
 model = mujoco.MjModel.from_xml_path("Cube.xml")
 data = mujoco.MjData(model)
@@ -91,8 +77,20 @@ for body_id in range(model.nbody):
     )
     print(body_id, name)
 
+cubies = rub.get_all_cubies()
+
+blue_face = get_subset(model=model, cubies=cubies, subset="b")
+q_rot = axis_angle_to_quat([1, 0, 0], 3 * np.pi / 2)
+for i, cubie in enumerate(blue_face):
+    data.mocap_quat[i] = quat_mul(q1=data.mocap_quat[i], q2=q_rot)
+
+yellow_face = get_subset(model=model, cubies=cubies, subset="y")
+q_rot = axis_angle_to_quat([0, 0, 1], np.pi / 2)
+for i, cubie in enumerate(yellow_face):
+    data.mocap_quat[i] = quat_mul(q1=data.mocap_quat[i], q2=q_rot)
+
 with mujoco.viewer.launch_passive(model, data) as viewer:
     while viewer.is_running():
         apply_cube_to_mujoco(rub, model=model, data=data)
-        mujoco.mj_forward(model=model, data=data)
+        mujoco.mj_forward(model, data)
         viewer.sync()
