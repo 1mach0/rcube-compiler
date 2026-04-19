@@ -7,7 +7,6 @@ from models import Cube
 SCALE = 0.04
 
 def quat_mul(q1, q2):
-    # Hamilton product
     w1, x1, y1, z1 = q1
     w2, x2, y2, z2 = q2
 
@@ -49,7 +48,6 @@ def get_subset(model, cubies, subset=None, colors=None):
                 continue
 
         if colors:
-            # e.g. ["y"] or ["y","b"]
             if not any(c in name for c in colors):
                 continue
 
