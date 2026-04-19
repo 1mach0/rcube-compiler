@@ -1,5 +1,3 @@
-import numpy as np
-
 class Cubie:
     def __init__(self, pos: tuple, or_x: tuple, or_y: tuple, or_z: tuple):
         self.coords = pos
@@ -41,11 +39,3 @@ CENTRES = [
 
 def neg_vec(v):
    return (-v[0], -v[1], -v[2])
-
-def orient_to_matrix(orient):
-    ax_x, ax_y, ax_z = orient
-    return np.array([
-        [ax_x[0], ax_y[0], ax_z[0]],
-        [ax_x[1], ax_y[1], ax_z[1]],
-        [ax_x[2], ax_y[2], ax_z[2]],
-    ])

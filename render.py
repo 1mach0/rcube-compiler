@@ -3,7 +3,6 @@ import mujoco
 import mujoco.viewer
 
 from models import Cube
-from utils import orient_to_matrix
 
 SCALE = 0.04
 
@@ -75,7 +74,7 @@ def convert_to_correct_orientation(model, cubies):
 
     return data
 
-model = mujoco.MjModel.from_xml_path("Cube.xml")
+model = mujoco.MjModel.from_xml_path("cube_model/Cube.xml")
 data = mujoco.MjData(model)
 
 rub = Cube()
