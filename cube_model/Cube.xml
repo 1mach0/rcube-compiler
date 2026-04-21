@@ -56,7 +56,6 @@
     <material name="green_red_yellow" texture="green_red_yellow"/>
     <material name="blue_orange_yellow" texture="blue_orange_yellow"/>
     <material name="green_orange_yellow" texture="green_orange_yellow"/>
-    <!-- <mesh name="cubelet" vertex="0.008075 0.0095 -0.008075 -0.008075 0.0095 -0.008075 0.008075 0.0095 0.008075 -0.008075 0.0095 0.008075 -0.0095 0.008075 -0.008075 -0.0095 -0.008075 -0.008075 -0.0095 0.008075 0.008075 -0.0095 -0.008075 0.008075 0.008075 -0.0095 -0.008075 0.008075 -0.0095 0.008075 -0.008075 -0.0095 -0.008075 -0.008075 -0.0095 0.008075 0.0095 0.008075 0.008075 0.0095 -0.008075 0.008075 0.0095 0.008075 -0.008075 0.0095 -0.008075 -0.008075 0.008075 0.008075 0.0095 -0.008075 0.008075 0.0095 0.008075 -0.008075 0.0095 -0.008075 -0.008075 0.0095 0.008075 -0.008075 -0.0095 -0.008075 -0.008075 -0.0095 0.008075 0.008075 -0.0095 -0.008075 0.008075 -0.0095"/> -->
   </asset>
 <worldbody>
   <light pos="0 0 1"/>
@@ -92,6 +91,5 @@
   <body name="x_gyr" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="green_red_yellow"/></body>
   <body name="x_gwo" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="green_orange_white"/></body>
   <body name="x_gwr" mocap="true" pos="0 0 0" quat="1 0 0 0"><geom type="box" size="0.018 0.018 0.018" material="green_red_white"/></body>
-
 </worldbody>
 </mujoco>

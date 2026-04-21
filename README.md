@@ -1,7 +1,5 @@
 # rcube-compiler
 
-> Note: This repository is still under-construction, the MuJoCo rendering *might* screw up the quaternion rotations
-
 A lightweight Rubik's Cube state-to-visualization engine that converts abstract cube state representations into fully rendered **MuJoCo** models for simulation, visualization, and future robotic/AI applications.
 
 ---
@@ -52,13 +50,14 @@ Rather than manually animating cube turns, the system models the cube as a colle
 ```bash
 rcube-compiler/
 │
+└── cube_model/
+  ├── Cube.xml           # MuJoCo scene/model definition
+  └── assets/            # Textures/materials/images
 ├── render.py          # MuJoCo rendering/visualization pipeline
 ├── models.py          # Core Cube/Cubie data structures
 ├── transforms.py      # Spatial rotation/transform logic
-├── utils.py           # Helper math + orientation conversion
-├── Cube.xml           # MuJoCo scene/model definition
-│
-└── assets/            # Textures/materials/images
+└── utils.py           # Helper math + orientation conversion
+
 ```
 
 ---
@@ -128,7 +127,7 @@ Launch the MuJoCo renderer:
 python render.py
 ```
 
----
+<!-- ---
 
 ## Future Plans
 
@@ -147,7 +146,7 @@ The eventual goal is to evolve `rcube-compiler` into a generalized:
 
 > **Discrete-to-Continuous Puzzle/Manipulation Compilation Engine**
 
-starting with Rubik’s Cube representations and extending toward broader robotic simulation tasks.
+starting with Rubik’s Cube representations and extending toward broader robotic simulation tasks. -->
 
 ---
 

@@ -80,14 +80,6 @@ cubies = rub.get_all_cubies()
 
 data = convert_to_correct_orientation(model=model, cubies=cubies)
 
-# for body_id in range(model.nbody):
-#     name = mujoco.mj_id2name(
-#         model,
-#         mujoco.mjtObj.mjOBJ_BODY,
-#         body_id
-#     )
-#     print(body_id, name)
-
 with mujoco.viewer.launch_passive(model, data) as viewer:
     while viewer.is_running():
         apply_cube_to_mujoco(cubies=cubies, data=data)
