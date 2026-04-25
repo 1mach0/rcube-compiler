@@ -127,16 +127,13 @@ Launch the MuJoCo renderer:
 python render.py
 ```
 
-<!-- ---
+---
 
 ## Future Plans
 
-* Smooth turn interpolation/animation
-* Scramble parser / algorithm parser
-* Full solver integration
-* Reinforcement learning environment wrapper
-* Robotic manipulation task generation
-* Vision-language-action experimentation
+- Smooth turn interpolation/animation
+- Move interactivity
+- 
 
 ---
 
@@ -146,7 +143,7 @@ The eventual goal is to evolve `rcube-compiler` into a generalized:
 
 > **Discrete-to-Continuous Puzzle/Manipulation Compilation Engine**
 
-starting with Rubik’s Cube representations and extending toward broader robotic simulation tasks. -->
+starting with Rubik’s Cube representations and extending toward broader robotic simulation tasks.
 
 ---
 
