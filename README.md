@@ -60,7 +60,8 @@ rcube-compiler/
 
 ```
 
----
+---pip install -r requirements.txt
+
 
 ## Architecture
 
@@ -133,7 +134,6 @@ python render.py
 
 - Smooth turn interpolation/animation
 - Move interactivity
-- 
 
 ---
 
