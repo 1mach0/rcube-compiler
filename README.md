@@ -157,7 +157,7 @@ mjpython -m render
 
 ## Status
 
-✅ All planned features have been implemented:
+⭐ All planned features have been implemented:
 
 - [x] Cubie-based state representation and transforms
 - [x] MuJoCo rendering pipeline
