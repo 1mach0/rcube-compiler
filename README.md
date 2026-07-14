@@ -31,16 +31,20 @@ Rather than manually animating cube turns, the system models the cube as a colle
 
 ## Features
 
-- Cubie-based Rubik’s Cube representation
+- Cubie-based Rubik's Cube representation
 - Full 3D coordinate/permutation tracking
 - Orientation tracking via basis-vector transforms
 - Support for standard cube moves:
-  - `U`, `D`, `L`, `R`, `F`, `B`
+  - `U`, `D`, `L`, `R`, `F`, `B` (clockwise and counter-clockwise)
 - Automatic conversion of cube state into:
   - Position vectors
   - Rotation matrices
   - Quaternions
 - Real-time MuJoCo rendering pipeline
+- **Smooth face-turn animations** with configurable duration
+- **Keyboard interactivity** for all standard moves, scramble, and reset
+- **Mouse drag interactivity** (Ctrl+Click & Drag) to rotate faces by dragging cubies
+- Animation queue for chaining multiple moves
 - Modular architecture for future expansion
 
 ---
@@ -60,7 +64,7 @@ rcube-compiler/
 
 ```
 
----pip install -r requirements.txt
+---
 
 
 ## Architecture
@@ -122,18 +126,44 @@ pip install -r requirements.txt
 
 ## Running
 
-Launch the MuJoCo renderer:
+Launch the MuJoCo renderer (requires `mjpython` on macOS):
 
 ```bash
-python render.py
+mjpython -m render
 ```
 
 ---
 
-## Future Plans
+## Controls
 
-- Smooth turn interpolation/animation
-- Move interactivity
+### Keyboard
+
+| Key | Action |
+| :---: | :--- |
+| `u` / `U` | Rotate U face (CW / CCW) |
+| `d` / `D` | Rotate D face (CW / CCW) |
+| `r` / `R` | Rotate R face (CW / CCW) |
+| `l` / `L` | Rotate L face (CW / CCW) |
+| `f` / `F` | Rotate F face (CW / CCW) |
+| `b` / `B` | Rotate B face (CW / CCW) |
+| `Space` | Scramble the cube (20 random moves) |
+| `Enter` / `Esc` | Reset cube to solved state |
+
+### Mouse
+
+- **Ctrl + Left Click & Drag** on any edge or corner cubie to rotate the corresponding face in the direction of the drag.
+
+---
+
+## Status
+
+✅ All planned features have been implemented:
+
+- [x] Cubie-based state representation and transforms
+- [x] MuJoCo rendering pipeline
+- [x] Smooth turn interpolation/animation
+- [x] Keyboard move interactivity
+- [x] Mouse drag interactivity
 
 ---
 
